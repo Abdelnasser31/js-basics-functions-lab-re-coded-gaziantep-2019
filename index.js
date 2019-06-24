@@ -1,6 +1,6 @@
 // Code your solution in this file!
 function distanceFromHqInBlocks(no){
-  return Math.abs(42 - number);
+  return Math.abs(42 - no);
 }
 describe('index.js', function() {
   describe('distanceFromHqInBlocks()', function() {
