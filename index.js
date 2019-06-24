@@ -2,49 +2,18 @@
 function distanceFromHqInBlocks(no){
   return Math.abs(42 - no);
 }
-describe('index.js', function() {
-  describe('distanceFromHqInBlocks()', function() {
-    it('returns a distance in blocks', function() {
-      expect(distanceFromHqInBlocks(43)).to.equal(1);
-    });
+function distanceFromHqInFeet(no){
+  return distanceFromHqInFeet(no) * 264;
+}
 
-    it('returns a distance in blocks', function() {
-      expect(distanceFromHqInBlocks(50)).to.equal(8);
-    });
-
-    it('calculates distances below 42nd street', function() {
-      expect(distanceFromHqInBlocks(34)).to.equal(8);
-    });
-  });
-
-  describe('distanceFromHqInFeet()', function() {
-    it('returns a distance in feet', function() {
-      expect(distanceFromHqInFeet(43)).to.equal(264);
-    });
-
-    it('returns a distance in feet', function() {
-      expect(distanceFromHqInFeet(50)).to.equal(2112);
-    });
-
-    it('calculates distances below 42nd street', function() {
-      expect(distanceFromHqInFeet(34)).to.equal(2112);
-    });
-  });
-
-  describe('distanceTravelledInFeet()', function() {
-    it('returns the distance travelled in feet', function() {
-      expect(distanceTravelledInFeet(43, 48)).to.equal(1320);
-    });
-
-    it('returns a distance in feet', function() {
-      expect(distanceTravelledInFeet(50, 60)).to.equal(2640);
-    });
-
-    it('returns distance when destination is below distance', function() {
-      expect(distanceTravelledInFeet(34, 28)).to.equal(1584);
-    });
-  });
-
+  function distanceTravelledInFeet(distance1 , distance2){
+    return Math.abs(distance1 - distance2) * 264;
+  }
+function calculatesFarePrice(start,destination){
+  if(distanceTravelledInFeet(start,destination) < 400 ){
+    return 0;
+  }else
+}
   describe('calculatesFarePrice(start, destination)', function() {
     it('gives customers a free sample', function() {
       expect(calculatesFarePrice(43, 44)).to.equal(0);
